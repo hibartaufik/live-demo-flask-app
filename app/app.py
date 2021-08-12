@@ -40,7 +40,7 @@ def make_picture(training_data_filename, model, new_inp_np_arr, output_file):
 
     new_preds = model.predict(new_inp_np_arr)
 
-    fig.add_trace(go.Scatter(x=new_inp_np_arr.reshape(len(new_inp_np_arr)), y=new_preds, name='New Outputs', mode='markers', marker=dict(color='purple', size=20, line=dict(color='purple', width=2))))
+    fig.add_trace(go.Scatter(x=new_inp_np_arr.reshape(len(new_inp_np_arr)), y=new_preds, name='New Outputs', mode='markers', marker=dict(color='#28FFBF', size=16, line=dict(color='purple', width=2))))
     fig.write_image(output_file, width=800, engine='kaleido')
     fig.show()
 
